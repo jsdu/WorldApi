@@ -87,33 +87,6 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket/CocoaAsyncSocket.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DocuSignESign/DocuSignESign.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GzipSwift/Gzip.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HyperTrack/HyperTrack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ISO8601/ISO8601.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/JustLog/JustLog.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SQLite.swift/SQLite.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyBeaver/SwiftyBeaver.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket/CocoaAsyncSocket.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DocuSignESign/DocuSignESign.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GzipSwift/Gzip.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HyperTrack/HyperTrack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ISO8601/ISO8601.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/JustLog/JustLog.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SQLite.swift/SQLite.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyBeaver/SwiftyBeaver.framework"
-fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

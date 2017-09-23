@@ -13,7 +13,24 @@
 		39F3B0B61F76E2FA00BF79CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0B41F76E2FA00BF79CF /* Main.storyboard */; };
 		39F3B0B81F76E2FA00BF79CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0B71F76E2FA00BF79CF /* Assets.xcassets */; };
 		39F3B0BB1F76E2FA00BF79CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0B91F76E2FA00BF79CF /* LaunchScreen.storyboard */; };
+		39F3B0C31F76F72A00BF79CF /* DocuSignSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */; };
+		39F3B0C41F76F72A00BF79CF /* DocuSignSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39F3B0C51F76F72A00BF79CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				39F3B0C41F76F72A00BF79CF /* DocuSignSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0810B81EDBCBE46440AF227B /* Pods-WorldApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldApi/Pods-WorldApi.release.xcconfig"; sourceTree = "<group>"; };
@@ -25,6 +42,8 @@
 		39F3B0B71F76E2FA00BF79CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F3B0BA1F76E2FA00BF79CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39F3B0BC1F76E2FA00BF79CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DocuSignSDK.framework; sourceTree = "<group>"; };
+		39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DocuSignSDK.bundle; path = DocuSignSDK.framework/DocuSignSDK.bundle; sourceTree = "<group>"; };
 		87068D42EBED582CEDD48E24 /* Pods_WorldApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -34,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA520F48DD8BFD8428CAF07 /* Pods_WorldApi.framework in Frameworks */,
+				39F3B0C31F76F72A00BF79CF /* DocuSignSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +63,8 @@
 		39F3B0A41F76E2FA00BF79CF = {
 			isa = PBXGroup;
 			children = (
+				39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */,
+				39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */,
 				39F3B0AF1F76E2FA00BF79CF /* WorldApi */,
 				39F3B0AE1F76E2FA00BF79CF /* Products */,
 				5F49D87CB2E77CBC5D2C4C74 /* Pods */,
@@ -101,6 +123,8 @@
 				39F3B0AB1F76E2FA00BF79CF /* Resources */,
 				D2A43FDD5774DA660AEC02B3 /* [CP] Embed Pods Frameworks */,
 				250F09A6CC39D10FA498F5A7 /* [CP] Copy Pods Resources */,
+				39F3B0C51F76F72A00BF79CF /* Embed Frameworks */,
+				39F3B0C81F76F7B200BF79CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -150,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */,
 				39F3B0BB1F76E2FA00BF79CF /* LaunchScreen.storyboard in Resources */,
 				39F3B0B81F76E2FA00BF79CF /* Assets.xcassets in Resources */,
 				39F3B0B61F76E2FA00BF79CF /* Main.storyboard in Resources */,
@@ -173,6 +198,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldApi/Pods-WorldApi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		39F3B0C81F76F7B200BF79CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/DocuSignSDK.framework/strip-frameworks.sh\"";
 		};
 		858A9BE627D861727FB0A2C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -352,11 +390,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F2BYR78VB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jsdu1996.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -368,11 +411,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F2BYR78VB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jsdu1996.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
