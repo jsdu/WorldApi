@@ -5,7 +5,7 @@ target 'WorldApi' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-# pod 'HyperTrack'
+ pod 'HyperTrack', '0.4.53’
 #  pod 'DocuSignESign'
 
 end
