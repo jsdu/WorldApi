@@ -1,0 +1,66 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Alamofire (4.4.0)
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
+  - DocuSignESign (2.0.0):
+    - AFNetworking (~> 2.3)
+    - ISO8601 (~> 0.3)
+    - JSONModel (~> 1.1)
+  - GzipSwift (3.1.4)
+  - HyperTrack (0.4.38):
+    - Alamofire (= 4.4.0)
+    - GzipSwift
+    - JustLog
+    - SQLite.swift (= 0.11.2)
+  - ISO8601 (0.6.0)
+  - JSONModel (1.7.0)
+  - JustLog (1.2.0):
+    - CocoaAsyncSocket (~> 7.5.0)
+    - SwiftyBeaver (~> 1.1.1)
+  - SQLite.swift (0.11.2):
+    - SQLite.swift/standard (= 0.11.2)
+  - SQLite.swift/standard (0.11.2)
+  - SwiftyBeaver (1.1.4)
+
+DEPENDENCIES:
+  - DocuSignESign (~> 2.0.0)
+  - HyperTrack
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  DocuSignESign: ad7fa6d72c33f96dafd46fc05af992413661bb29
+  GzipSwift: 11ddb2bf253b1cd7b60bb169da20f62ac4348769
+  HyperTrack: 1234130f434eb95b8c083f4c416e6fc71a71c0f5
+  ISO8601: d3ea3ba9b752820cf92c6b47a9ee327e9f0e13fc
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  JustLog: 035ff2d06efd8cae26aeaf05cb2471f03ee866bb
+  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+  SwiftyBeaver: 9216b6e163c145628ccc7c0126df4287880d6e1e
+
+PODFILE CHECKSUM: 3c116ff9405568bb1f0196f0fba4cc41cb71bed8
+
+COCOAPODS: 1.2.1
