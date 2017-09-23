@@ -17,6 +17,9 @@
 		39F3B0C41F76F72A00BF79CF /* DocuSignSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */; };
 		39F3B0CB1F7702D600BF79CF /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0C91F7702D600BF79CF /* LiveStreamViewController.swift */; };
+		39F3B0CD1F77039700BF79CF /* WowzaGoCoderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */; };
+		39F3B0CE1F77039700BF79CF /* WowzaGoCoderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39F3B0CF1F77057200BF79CF /* LiveStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0CA1F7702D600BF79CF /* LiveStream.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				39F3B0CE1F77039700BF79CF /* WowzaGoCoderSDK.framework in Embed Frameworks */,
 				39F3B0C41F76F72A00BF79CF /* DocuSignSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -47,6 +51,7 @@
 		39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DocuSignSDK.bundle; path = DocuSignSDK.framework/DocuSignSDK.bundle; sourceTree = "<group>"; };
 		39F3B0C91F7702D600BF79CF /* LiveStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
 		39F3B0CA1F7702D600BF79CF /* LiveStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LiveStream.storyboard; sourceTree = "<group>"; };
+		39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WowzaGoCoderSDK.framework; sourceTree = "<group>"; };
 		87068D42EBED582CEDD48E24 /* Pods_WorldApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F3B0CD1F77039700BF79CF /* WowzaGoCoderSDK.framework in Frameworks */,
 				2CA520F48DD8BFD8428CAF07 /* Pods_WorldApi.framework in Frameworks */,
 				39F3B0C31F76F72A00BF79CF /* DocuSignSDK.framework in Frameworks */,
 			);
@@ -66,6 +72,7 @@
 		39F3B0A41F76E2FA00BF79CF = {
 			isa = PBXGroup;
 			children = (
+				39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */,
 				39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */,
 				39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */,
 				39F3B0AF1F76E2FA00BF79CF /* WorldApi */,
@@ -179,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F3B0CF1F77057200BF79CF /* LiveStream.storyboard in Resources */,
 				39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */,
 				39F3B0BB1F76E2FA00BF79CF /* LaunchScreen.storyboard in Resources */,
 				39F3B0B81F76E2FA00BF79CF /* Assets.xcassets in Resources */,
