@@ -18,7 +18,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorldApi/HyperTrackAppService.swift"
-            timestampString = "527971009.539637"
+            timestampString = "527974000.145836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -34,7 +34,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorldApi/HyperTrackAppService.swift"
-            timestampString = "527971009.539948"
+            timestampString = "527974000.146219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -50,7 +50,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorldApi/HyperTrackAppService.swift"
-            timestampString = "527971009.540018"
+            timestampString = "527974000.146282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -88,22 +88,6 @@
             startingLineNumber = "556"
             endingLineNumber = "556"
             landmarkName = "cancelActions(userId:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorldApi/NavigationViewController.swift"
-            timestampString = "527971009.5402"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "didSelectLocation(place:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

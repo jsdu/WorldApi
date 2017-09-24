@@ -11,6 +11,7 @@ import UIKit
 import MapKit
 import DocuSignSDK
 import HyperTrack
+import Parse
 
 class NavigationViewController: UIViewController {
     
@@ -105,7 +106,14 @@ extension NavigationViewController:HTViewInteractionDelegate {
                     if (error != nil) {
                         return
                     }
-
+                    if let lookUpId = action.lookupId {
+                        // Send lookUpId to parse server
+                        let testObject = PFObject(className: "TrackingId")
+                        testObject["Id"] = action.lookupId
+                        testObject.saveInBackground { (success, failure) in
+                            print(success)
+                        }
+                    }
                 })
 
                 return

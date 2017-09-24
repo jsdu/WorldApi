@@ -11,6 +11,7 @@ import UIKit
 import MapKit
 import DocuSignSDK
 import HyperTrack
+import Parse
 
 class CustomerDeliveryViewController: UIViewController {
 
@@ -53,11 +54,40 @@ class CustomerDeliveryViewController: UIViewController {
     override func viewDidLoad() {
         isSDKInitialized()
 
-        hyperTrackMap = HyperTrack.map()
-        hyperTrackMap?.enableLiveLocationSharingView = true
-        hyperTrackMap?.showConfirmLocationButton = true
-        hyperTrackMap?.setHTViewInteractionDelegate(interactionDelegate: self)
-        hyperTrackMap?.embedIn(self.htView)
+
+        // Get lookupId from Parse database
+        var lookUpQuery = PFQuery(className: "TransactionId")
+        lookUpQuery.order(byAscending: "Id")
+        lookUpQuery.findObjectsInBackgroundWithBlock {
+            (ids:[AnyObject]?, error: NSError?) -> Void in
+
+            if error == nil {
+                let idArr  = ids as! [PFObject]
+                let lookUpId = idArr[0]
+
+                HyperTrack.trackActionFor(lookUpId: lookUpId, completionHandler: { (actions, error) in
+
+                    if let _ = error {
+                        print("recieved error while tracking via lookupId. error : " + (error.errorMessage))
+                        return
+                    }
+                    if let actions = actions {
+                        if actions.count > 0 {
+                            self.expectedPlace = actions.last?.expectedPlace
+                            let map = HyperTrack.map()
+                            map.enableLiveLocationSharingView = true
+                            map.setHTViewInteractionDelegate(interactionDelegate: self)
+                            if (self.hypertrackView != nil) {
+                                self.hyperTrackMap = map
+                                self.hyperTrackMap?.embedIn(self.hypertrackView)
+                            }
+                        }
+                    }
+                })
+            } else {
+                print(error)
+            }
+        }
     }
 
     @IBAction func sign(_ sender: Any) {

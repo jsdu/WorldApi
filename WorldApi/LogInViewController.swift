@@ -66,20 +66,20 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         if let userName = userName.text, let password = passWord.text
         {
-//            PFUser.logInWithUsername(inBackground: userName, password: password,
-//                                     block: {(user, error) -> Void in
-//                                        if let error = error as NSError? {
-//                                            let errorString = error.userInfo["error"] as? NSString
-//                                        } else {
-//                                            HyperTrack.setUserId(userName)
-//                                            if self.switchCustomer.isOn
-//                                            {
-//                                                self.performSegue(withIdentifier: "toCustomer", sender: self)
-//                                            } else {
-//                                                self.performSegue(withIdentifier: "toDelivery", sender: self)
-//                                            }
-//                                        }
-//            })
+            PFUser.logInWithUsername(inBackground: userName, password: password,
+                                     block: {(user, error) -> Void in
+                                        if let error = error as NSError? {
+                                            let errorString = error.userInfo["error"] as? NSString
+                                        } else {
+                                            HyperTrack.setUserId(userName)
+                                            if self.switchCustomer.isOn
+                                            {
+                                                self.performSegue(withIdentifier: "toCustomer", sender: self)
+                                            } else {
+                                                self.performSegue(withIdentifier: "toDelivery", sender: self)
+                                            }
+                                        }
+            })
             HyperTrack.setUserId(userName)
             if self.switchCustomer.isOn
             {

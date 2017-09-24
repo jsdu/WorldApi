@@ -48,7 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
-
+        let testObject = PFObject(className: "TrackingId")
+        testObject["Id"] = "dfsdgsdhfdg-512dc21"
+        testObject.saveInBackground { (success, failure) in
+            print(success)
+        }
 
         return true
     }
