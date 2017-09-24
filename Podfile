@@ -6,5 +6,9 @@ target 'WorldApi' do
   use_frameworks!
 
  pod 'HyperTrack', '0.4.53’
-
+ pod 'MBProgressHUD'
+ pod 'PhoneNumberKit', '~> 1.2'
+ pod 'Branch'
+ pod 'FSCalendar'
+ pod 'Parse'
 end

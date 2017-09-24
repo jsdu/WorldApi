@@ -9,6 +9,8 @@
 import UIKit
 import DocuSignSDK
 import HyperTrack
+import Parse
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HyperTrack.initialize("pk_test_e9d10519b35085979d1b08a7c7f9127c6eb4cfe0")
         HyperTrack.requestAlwaysAuthorization()
         HyperTrack.requestMotionAuthorization()
+
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "yv9WK7yZKfjBwkosHhnJG1tBDFVjzdcl0Gw27tgr"
+            $0.clientKey = "85t2kl92Pd7wIrO3bbR4r3faiNO6VzydV2I9IHB3"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: configuration)
+
         return true
     }
 

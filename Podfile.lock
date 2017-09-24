@@ -1,23 +1,48 @@
 PODS:
   - Alamofire (4.4.0)
+  - Bolts/Tasks (1.8.4)
+  - Branch (0.18.8):
+    - Branch/Core (= 0.18.8)
+  - Branch/Core (0.18.8)
+  - FSCalendar (2.7.9)
   - GzipSwift-beta (4.0.0-beta.2)
   - HyperTrack (0.4.53):
     - Alamofire (= 4.4.0)
     - GzipSwift-beta (= 4.0.0-beta.2)
     - SQLite.swift (= 0.11.2)
+  - MBProgressHUD (1.0.0)
+  - Parse (1.15.3):
+    - Bolts/Tasks (~> 1.8)
+  - PhoneNumberKit (1.4.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 1.4.0)
+    - PhoneNumberKit/UIKit (= 1.4.0)
+  - PhoneNumberKit/PhoneNumberKitCore (1.4.0)
+  - PhoneNumberKit/UIKit (1.4.0):
+    - PhoneNumberKit/PhoneNumberKitCore
   - SQLite.swift (0.11.2):
     - SQLite.swift/standard (= 0.11.2)
   - SQLite.swift/standard (0.11.2)
 
 DEPENDENCIES:
+  - Branch
+  - FSCalendar
   - HyperTrack (= 0.4.53)
+  - MBProgressHUD
+  - Parse
+  - PhoneNumberKit (~> 1.2)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Branch: c8181636136a8ac2477f42ec8b811f50aa359c8c
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   GzipSwift-beta: b74b704e17b4b7ea1de99460ec5ad6458d078f32
   HyperTrack: b13784b5f2f08d4208edf9a4f82d97b5dc526fea
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
+  PhoneNumberKit: a739c359d05701e2e9745654f53e7c64379c2516
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
 
-PODFILE CHECKSUM: 88f44c9cd231b2df4e466495e7b0a1bd12c49def
+PODFILE CHECKSUM: cd90f748bf7a22c55bc439e75c73ec67eeaa325c
 
 COCOAPODS: 1.2.1

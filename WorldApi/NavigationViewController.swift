@@ -15,7 +15,6 @@ import HyperTrack
 class NavigationViewController: UIViewController {
     
     @IBOutlet weak var htView: UIView!
-    @IBOutlet weak var facetimeButton: UIButton!
     @IBOutlet weak var signButton: UIButton!
     var hyperTrackMap : HTMap? = nil
 
@@ -27,14 +26,47 @@ class NavigationViewController: UIViewController {
             }
         }
     }
+
+    func isSDKInitialized() -> Bool{
+        if (HyperTrack.getPublishableKey() == nil){
+            showAlert(title:"Step 3 is not completed", message: "Please initialize the Hypertrack SDK.")
+            return false
+        }
+        
+        
+        if(HyperTrack.getPublishableKey() == "YOUR_PUBLISHABLE_KEY"){
+            showAlert(title:"Step 3 is not completed", message: "The API key is not correct.If you have the key add it properyly, if you don't get the API Key as described on the repo.")
+            return false
+        }
+        
+        if(HyperTrack.getUserId() == nil || HyperTrack.getUserId() == ""){
+            showAlert(title:"Step 4 is not completed", message: "Yay the SDK is set up , but the user is not created",buttonTitle: "Create User" ){(action) in
+            }
+        }
+        
+        return true
+    }
+
+    fileprivate func showAlert(title: String?, message: String?, buttonTitle : String = "OK",handler: ((UIAlertAction) -> Swift.Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let ok : UIAlertAction = UIAlertAction.init(title: buttonTitle, style: .cancel) { (action) in
+            if (handler != nil){
+                handler!(action)
+            }
+        }
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
+        isSDKInitialized()
+
         hyperTrackMap = HyperTrack.map()
         hyperTrackMap?.enableLiveLocationSharingView = true
         hyperTrackMap?.showConfirmLocationButton = true
         hyperTrackMap?.setHTViewInteractionDelegate(interactionDelegate: self)
         hyperTrackMap?.embedIn(self.htView)
-        HyperTrack.startTracking()
     }
     
     @IBAction func sign(_ sender: Any) {
@@ -57,7 +89,28 @@ extension NavigationViewController:HTViewInteractionDelegate {
     func didSelectLocation(place : HyperTrackPlace?){
 
         //  Start a Live Location Trip : Step 2. This is the callback which gets called when the user select a location. Create an action and assign it.
+        let htActionParams = HyperTrackActionParams()
+        htActionParams.expectedPlace = place
+        htActionParams.type = "visit"
+        htActionParams.lookupId = UUID().uuidString
 
+        HyperTrack.createAndAssignAction(htActionParams, { (action, error) in
+            if let error = error {
+                print("recieved error while creating and assigning action. error : " + (error.errorMessage))
+                return
+            }
+            if let action = action {
+
+                HyperTrack.trackActionFor(lookUpId: action.lookupId!, completionHandler: { (actions, error) in
+                    if (error != nil) {
+                        return
+                    }
+
+                })
+
+                return
+            }
+        })
     }
 
 
@@ -73,8 +126,6 @@ extension NavigationViewController:HTViewInteractionDelegate {
 
     func didTapShareLiveLocationLink(action : HyperTrackAction){
         if let lookupId = action.lookupId {
-
-            //  Start a Live Location Trip : Step 3 : This is the callback when the user wants to share his location to his friends. Create a activity view controller to share it through messenger apps
 
             let textToShare : Array = [lookupId]
             let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
