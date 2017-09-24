@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 import MapKit
 import DocuSignSDK
+import HyperTrack
 
 class NavigationViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var facetimeButton: UIButton!
     @IBOutlet weak var signButton: UIButton!
+    var hyperTrackMap : HTMap? = nil
 
     private func facetime(phoneNumber:String) {
         if let facetimeURL:NSURL = NSURL(string: "facetime://\(phoneNumber)") {
@@ -27,9 +28,11 @@ class NavigationViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 37.12, longitude: -121.14)
-        mapView.addAnnotation(annotation)
+        hyperTrackMap = HyperTrack.map()
+        hyperTrackMap?.enableLiveLocationSharingView = true
+        hyperTrackMap?.showConfirmLocationButton = true
+        hyperTrackMap?.setHTViewInteractionDelegate(interactionDelegate: self)
+        hyperTrackMap?.embedIn(self.view)
     }
     
     @IBAction func sign(_ sender: Any) {
@@ -44,5 +47,41 @@ class NavigationViewController: UIViewController {
     @IBAction func facetime(_ sender: Any) {
         facetime(phoneNumber: "+14088215303") //Ralfs phone number
     }
-    
 }
+
+extension NavigationViewController:HTViewInteractionDelegate {
+
+
+    func didSelectLocation(place : HyperTrackPlace?){
+
+        //  Start a Live Location Trip : Step 2. This is the callback which gets called when the user select a location. Create an action and assign it.
+
+    }
+
+
+    func didTapBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func didTapStopLiveLocationSharing(actionId : String){
+        //This is the callback when user want to stop the trip. Complete the action
+
+        HyperTrack.completeAction(actionId)
+    }
+
+    func didTapShareLiveLocationLink(action : HyperTrackAction){
+        if let lookupId = action.lookupId {
+
+            //  Start a Live Location Trip : Step 3 : This is the callback when the user wants to share his location to his friends. Create a activity view controller to share it through messenger apps
+
+            let textToShare : Array = [lookupId]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.completionWithItemsHandler = { activityType, complete, returnedItems, error in
+            }
+            self.present(activityViewController, animated: false, completion: nil)
+
+        }
+    }
+
+}
+

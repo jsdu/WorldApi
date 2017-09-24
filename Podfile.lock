@@ -1,49 +1,23 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
   - Alamofire (4.4.0)
-  - DocuSignESign (3.0.0):
-    - AFNetworking (~> 3.1)
-    - ISO8601 (~> 0.6)
-    - JSONModel (~> 1.4)
   - GzipSwift-beta (4.0.0-beta.2)
   - HyperTrack (0.4.53):
     - Alamofire (= 4.4.0)
     - GzipSwift-beta (= 4.0.0-beta.2)
     - SQLite.swift (= 0.11.2)
-  - ISO8601 (0.6.0)
-  - JSONModel (1.7.0)
   - SQLite.swift (0.11.2):
     - SQLite.swift/standard (= 0.11.2)
   - SQLite.swift/standard (0.11.2)
 
 DEPENDENCIES:
-  - DocuSignESign
   - HyperTrack (= 0.4.53)
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  DocuSignESign: 98fb31242e4491d8422d8600a2c623e2071ec973
   GzipSwift-beta: b74b704e17b4b7ea1de99460ec5ad6458d078f32
   HyperTrack: b13784b5f2f08d4208edf9a4f82d97b5dc526fea
-  ISO8601: d3ea3ba9b752820cf92c6b47a9ee327e9f0e13fc
-  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
 
-PODFILE CHECKSUM: c286b47bbfc1ec8e9745d35090f180ab24078f7d
+PODFILE CHECKSUM: 88f44c9cd231b2df4e466495e7b0a1bd12c49def
 
 COCOAPODS: 1.2.1
