@@ -50,6 +50,7 @@
 		3920A1391F780CF200E65221 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3920A1381F780CF200E65221 /* SystemConfiguration.framework */; };
 		3920A13B1F780CFA00E65221 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3920A13A1F780CFA00E65221 /* libz.tbd */; };
 		3920A13D1F780D0600E65221 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3920A13C1F780D0500E65221 /* libsqlite3.tbd */; };
+		3920A13F1F781EA600E65221 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920A13E1F781EA600E65221 /* TutorialViewController.swift */; };
 		399C62751F7786CE00E7C21D /* DeliveryRouteControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399C62741F7786CD00E7C21D /* DeliveryRouteControllerTableViewController.swift */; };
 		39F3B0B11F76E2FA00BF79CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0B01F76E2FA00BF79CF /* AppDelegate.swift */; };
 		39F3B0B31F76E2FA00BF79CF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0B21F76E2FA00BF79CF /* LogInViewController.swift */; };
@@ -128,6 +129,7 @@
 		3920A1381F780CF200E65221 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3920A13A1F780CFA00E65221 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3920A13C1F780D0500E65221 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3920A13E1F781EA600E65221 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		399C62741F7786CD00E7C21D /* DeliveryRouteControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRouteControllerTableViewController.swift; sourceTree = "<group>"; };
 		39F3B0AD1F76E2FA00BF79CF /* WorldApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F3B0B01F76E2FA00BF79CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				39F3B0B01F76E2FA00BF79CF /* AppDelegate.swift */,
 				3920A0C91F77B3D900E65221 /* HTLiveConstants.swift */,
+				3920A13E1F781EA600E65221 /* TutorialViewController.swift */,
 				3920A0FD1F77B3DB00E65221 /* HyperTrackFlowInteractor.swift */,
 				3920A1031F77B3DD00E65221 /* LaunchScreen.storyboard */,
 				3920A1221F77B9DE00E65221 /* Placeline */,
@@ -489,6 +492,7 @@
 				3920A0BA1F77B3AD00E65221 /* HyperTrackAppService.swift in Sources */,
 				3920A0BF1F77B3AD00E65221 /* OnboardingFlowController.swift in Sources */,
 				39F3B0D31F774A9E00BF79CF /* TableViewController.swift in Sources */,
+				3920A13F1F781EA600E65221 /* TutorialViewController.swift in Sources */,
 				39F3B0B11F76E2FA00BF79CF /* AppDelegate.swift in Sources */,
 				3920A0BC1F77B3AD00E65221 /* MKMapView+Extension.swift in Sources */,
 				3920A1131F77B43B00E65221 /* CustomShareView.swift in Sources */,
@@ -643,6 +647,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -664,6 +669,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";

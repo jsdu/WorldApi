@@ -20,9 +20,28 @@ class DeliveryRouteControllerTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.mapView.showsUserLocation = true
+        let coordinate: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(37.408384, -122.143464);
+        let latitudinalMeters: CLLocationDistance = 10000
+        let longitudinalMeters: CLLocationDistance = 10000
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, latitudinalMeters, longitudinalMeters)
+        self.mapView.setRegion(region, animated: true) // Set to yes to animate, you said initial load so I image this won't be visible anyways.
+
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 11.12, longitude: 12.11)
+        let annotation1 = MKPointAnnotation()
+        let annotation2 = MKPointAnnotation()
+        let annotation3 = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 37.408384,longitude: -122.143464)
+        annotation1.coordinate = CLLocationCoordinate2D(latitude: 37.45512,longitude: -122.149167)
+        annotation2.coordinate = CLLocationCoordinate2D(latitude: 37.433753,longitude: -122.13478)
+        annotation3.coordinate = CLLocationCoordinate2D(latitude: 37.4654,longitude: -122.143434)
+        annotation.title = "Eric"
+        annotation1.title = "Amy"
+        annotation2.title = "Dave"
+        annotation3.title = "Mary"
         self.mapView.addAnnotation(annotation)
+        self.mapView.addAnnotation(annotation1)
+        self.mapView.addAnnotation(annotation2)
+        self.mapView.addAnnotation(annotation3)
         
         
     }

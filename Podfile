@@ -11,4 +11,6 @@ target 'WorldApi' do
  pod 'Branch'
  pod 'FSCalendar'
  pod 'Parse'
+ pod 'Presentation'
+ pod 'Hue'
 end

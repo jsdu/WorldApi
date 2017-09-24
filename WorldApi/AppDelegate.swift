@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var navigationController: UINavigationController = { [unowned self] in
+        let controller = UINavigationController(rootViewController: self.presentationController)
+
+        return controller
+        }()
+
+    lazy var presentationController: TutorialViewController = {
+        return TutorialViewController(pages: [])
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         DSMManager.setup()
@@ -29,6 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
+
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().barStyle = .default
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
+
 
         return true
     }
