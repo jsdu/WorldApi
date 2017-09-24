@@ -16,10 +16,10 @@
 		39F3B0C31F76F72A00BF79CF /* DocuSignSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */; };
 		39F3B0C41F76F72A00BF79CF /* DocuSignSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */; };
-		39F3B0CB1F7702D600BF79CF /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0C91F7702D600BF79CF /* LiveStreamViewController.swift */; };
 		39F3B0CD1F77039700BF79CF /* WowzaGoCoderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */; };
 		39F3B0CE1F77039700BF79CF /* WowzaGoCoderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		39F3B0CF1F77057200BF79CF /* LiveStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F3B0CA1F7702D600BF79CF /* LiveStream.storyboard */; };
+		39F3B0D11F774A8400BF79CF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0D01F774A8400BF79CF /* NavigationViewController.swift */; };
+		39F3B0D31F774A9E00BF79CF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3B0D21F774A9E00BF79CF /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,9 +49,9 @@
 		39F3B0BC1F76E2FA00BF79CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39F3B0C21F76F67000BF79CF /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DocuSignSDK.framework; sourceTree = "<group>"; };
 		39F3B0C61F76F77900BF79CF /* DocuSignSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DocuSignSDK.bundle; path = DocuSignSDK.framework/DocuSignSDK.bundle; sourceTree = "<group>"; };
-		39F3B0C91F7702D600BF79CF /* LiveStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
-		39F3B0CA1F7702D600BF79CF /* LiveStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LiveStream.storyboard; sourceTree = "<group>"; };
 		39F3B0CC1F77036F00BF79CF /* WowzaGoCoderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WowzaGoCoderSDK.framework; sourceTree = "<group>"; };
+		39F3B0D01F774A8400BF79CF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		39F3B0D21F774A9E00BF79CF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		87068D42EBED582CEDD48E24 /* Pods_WorldApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,9 +95,9 @@
 			children = (
 				39F3B0B01F76E2FA00BF79CF /* AppDelegate.swift */,
 				39F3B0B21F76E2FA00BF79CF /* ViewController.swift */,
+				39F3B0D21F774A9E00BF79CF /* TableViewController.swift */,
+				39F3B0D01F774A8400BF79CF /* NavigationViewController.swift */,
 				39F3B0B41F76E2FA00BF79CF /* Main.storyboard */,
-				39F3B0CA1F7702D600BF79CF /* LiveStream.storyboard */,
-				39F3B0C91F7702D600BF79CF /* LiveStreamViewController.swift */,
 				39F3B0B71F76E2FA00BF79CF /* Assets.xcassets */,
 				39F3B0B91F76E2FA00BF79CF /* LaunchScreen.storyboard */,
 				39F3B0BC1F76E2FA00BF79CF /* Info.plist */,
@@ -186,7 +186,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F3B0CF1F77057200BF79CF /* LiveStream.storyboard in Resources */,
 				39F3B0C71F76F77900BF79CF /* DocuSignSDK.bundle in Resources */,
 				39F3B0BB1F76E2FA00BF79CF /* LaunchScreen.storyboard in Resources */,
 				39F3B0B81F76E2FA00BF79CF /* Assets.xcassets in Resources */,
@@ -262,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F3B0D11F774A8400BF79CF /* NavigationViewController.swift in Sources */,
 				39F3B0B31F76E2FA00BF79CF /* ViewController.swift in Sources */,
-				39F3B0CB1F7702D600BF79CF /* LiveStreamViewController.swift in Sources */,
+				39F3B0D31F774A9E00BF79CF /* TableViewController.swift in Sources */,
 				39F3B0B11F76E2FA00BF79CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +411,7 @@
 				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jsdu1996.WorldApi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -432,7 +432,7 @@
 				);
 				INFOPLIST_FILE = WorldApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jsdu1996.WorldApi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WorldApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

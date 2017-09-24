@@ -6,6 +6,5 @@ target 'WorldApi' do
   use_frameworks!
 
  pod 'HyperTrack', '0.4.53’
-#  pod 'DocuSignESign'
 
 end

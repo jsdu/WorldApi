@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import DocuSignSDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        DSMManager.setup()
         // Override point for customization after application launch.
         return true
     }
