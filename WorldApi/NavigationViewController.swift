@@ -14,6 +14,7 @@ import HyperTrack
 
 class NavigationViewController: UIViewController {
     
+    @IBOutlet weak var htView: UIView!
     @IBOutlet weak var facetimeButton: UIButton!
     @IBOutlet weak var signButton: UIButton!
     var hyperTrackMap : HTMap? = nil
@@ -32,7 +33,8 @@ class NavigationViewController: UIViewController {
         hyperTrackMap?.enableLiveLocationSharingView = true
         hyperTrackMap?.showConfirmLocationButton = true
         hyperTrackMap?.setHTViewInteractionDelegate(interactionDelegate: self)
-        hyperTrackMap?.embedIn(self.view)
+        hyperTrackMap?.embedIn(self.htView)
+        HyperTrack.startTracking()
     }
     
     @IBAction func sign(_ sender: Any) {
